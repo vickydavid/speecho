@@ -47,7 +47,7 @@ var sttAuthService = new watson.AuthorizationV1(
     vcapServices.getCredentials('speech_to_text') // pulls credentials from environment in bluemix, otherwise returns {}
   )
 );
-app.use('https://speecho.herokuapp.com/api/speech-to-text/token', function(req, res) {
+app.use('/api/speech-to-text/token', function(req, res) {
   sttAuthService.getToken(
     {
       url: watson.SpeechToTextV1.URL
@@ -64,8 +64,8 @@ app.use('https://speecho.herokuapp.com/api/speech-to-text/token', function(req, 
 });
 
 const port = process.env.PORT || process.env.VCAP_APP_PORT || 3002;
-app.listen(port, function() {
-  console.log('Example IBM Watson Speech JS SDK client app & token server live at http://localhost:%s/', port);
+app.listen(process.env.PORT, function() {
+  console.log('Example IBM Watson Speech JS SDK client app & token server live at http://localhost:%s/', process.env.PORT);
 });
 
 // Chrome requires https to access the user's microphone unless it's a localhost url so
