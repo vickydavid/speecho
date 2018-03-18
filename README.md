@@ -11,3 +11,5 @@ To Perform a task on this website using voice/speech you have to say these words
 <strong>Creative</strong> <br>
 <strong>Blog</strong> <br>
 <strong>License</strong> <br>
+
+This website uses the ibm watson speech token a lite plan which expires after certain period of time but i will do my best to update the token on the server as soon as possible to make the website up and running with the speech commands.
