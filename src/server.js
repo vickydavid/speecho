@@ -47,7 +47,7 @@ var sttAuthService = new watson.AuthorizationV1(
     vcapServices.getCredentials('speech_to_text') // pulls credentials from environment in bluemix, otherwise returns {}
   )
 );
-app.use('https://speecho.herokuapp.com/api/speech-to-text/token', function(req, res) {
+app.use('/api/speech-to-text/token', function(req, res) {
   sttAuthService.getToken(
     {
       url: watson.SpeechToTextV1.URL
