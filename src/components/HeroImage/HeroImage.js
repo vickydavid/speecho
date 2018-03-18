@@ -10,7 +10,7 @@ class HeroImage extends React.Component {
   }
   onListenClick() {
 
-    fetch('http://localhost:3002/api/speech-to-text/token')
+    fetch('https://speecho.herokuapp.com/api/speech-to-text/token')
 
       .then(function(response) {
           return response.text();
